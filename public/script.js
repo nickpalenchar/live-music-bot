@@ -6,7 +6,7 @@ $(function () {
   console.log("adding event");
   $('#test').click(function(){
     console.log("sending");
-    socket.emit('test');
+    socket.emit('sendNote', 'C4');
   });
 
 });

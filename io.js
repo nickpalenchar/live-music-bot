@@ -9,12 +9,12 @@ module.exports = function (server) {
   io = socketio(server);
 
   io.on('connection', function (socket) {
+    console.log('connectedddd   ');
 
-    socket.on('test', function () {
-      console.log("TEST RECIEVED ");
-      socket.emit('test');
+    socket.on('sendNote', function (note) {
+      console.log("TEST RECIEVED ", note);
+      io.sockets.emit('playNote', note);
     });
-
 
     socket.on('disconnect',function () {
       console.log("discennected");
