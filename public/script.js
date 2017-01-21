@@ -1,6 +1,6 @@
 var socket = io();
 
 $("input").click(function (e) {
-  var clickedId = e.target.id
-    socket.emit('sendNote', clickedId);
+  var clickedButtonValue = e.target.value;
+    socket.emit('sendNote', clickedButtonValue);
 });
