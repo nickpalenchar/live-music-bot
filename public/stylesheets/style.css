@@ -1,17 +1,16 @@
 body {
   background: #00ECB9;
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 input {
-  margin-top: 10px;
+  margin-top: 5%;
   background-color: #00816A;
   color: #fff;
   border-radius: 99px;
   font-family: sans-serif;
-  font-size: 14px;
-  padding: 5px;
+  font-size: 20px;
+  padding: 5vh;
   border: none;
 }
 
@@ -19,20 +18,18 @@ a {
   color: #00B7FF;
 }
 
-.title {
-  border: 5px solid white;
-  border-radius: 5px;
+br {
+	height: 5px;
 }
+
 
 .main-container {
 	display: flex;
   	align-items: center;
   	justify-content: center;
+  	flex-direction: row;
 }
 
-.container {
-	padding-top: 15%;
-}
 
 .title-container {
 	max-width: 50%;
@@ -42,4 +39,24 @@ a {
 .title-main {
 	text-align: center;
 	
+}
+
+@media only screen and (max-width: 500px) {
+    .main-container {
+		display: flex;
+  		align-items: center;
+  		justify-content: center;
+  		flex-direction: column;
+	}
+
+	input {
+	  margin-top: 5%;
+	  background-color: #00816A;
+	  color: #fff;
+	  border-radius: 99px;
+	  font-family: sans-serif;
+	  font-size: 20px;
+	  padding: 4vh;
+	  border: none;
+	}
 }
