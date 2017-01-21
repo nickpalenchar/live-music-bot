@@ -1,6 +1,5 @@
 var socket = io();
 
-<<<<<<< HEAD
 $(function () {
   console.log("adding event");
   $('#test').click(function(){
@@ -9,9 +8,7 @@ $(function () {
   });
 
 });
-=======
 $("input").click(function (e) {
   var clickedId = e.target.id
     socket.emit('sendNote', clickedId);
 });
->>>>>>> master
