@@ -1,8 +1,45 @@
 body {
+  background: #00ECB9;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+input {
+  margin-top: 10px;
+  background-color: #00816A;
+  color: #fff;
+  border-radius: 99px;
+  font-family: sans-serif;
+  font-size: 14px;
+  padding: 5px;
+  border: none;
+}
+
 a {
   color: #00B7FF;
+}
+
+.title {
+  border: 5px solid white;
+  border-radius: 5px;
+}
+
+.main-container {
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
+}
+
+.container {
+	padding-top: 15%;
+}
+
+.title-container {
+	max-width: 50%;
+	margin: 0 auto;
+}
+
+.title-main {
+	text-align: center;
+	
 }
