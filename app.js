@@ -26,6 +26,9 @@ app.get('/', function(req, res){
   console.log("sending file");
   res.sendFile(path.join(__dirname, "/views/index.html"));
 });
+app.get('/player', function (req, res) {
+  res.sendFile(path.join(__dirname, "/views/player.html"));
+});
 app.use('/users', users);
 
 // catch 404 and forward to error handler
