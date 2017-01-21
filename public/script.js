@@ -4,9 +4,14 @@ var socket = io();
 
 $(function () {
   console.log("adding event");
-  $('#test').click(function(){
+  $('#d').click(function(){
     console.log("sending");
-    socket.emit('test');
+    socket.emit('sendNote', 'D4');
+  });
+
+  $('#e').click(function(){
+    console.log("sending");
+    socket.emit('sendNote', 'E4');
   });
 
 });

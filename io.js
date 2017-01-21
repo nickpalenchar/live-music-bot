@@ -10,8 +10,8 @@ module.exports = function (server) {
 
   io.on('connection', function (socket) {
 
-    socket.on('test', function () {
-      console.log("TEST RECIEVED ");
+    socket.on('sendNote', function (note) {
+      console.log("NOTE RECIEVED, note is ", note);
       socket.emit('test');
     });
 
