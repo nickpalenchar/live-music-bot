@@ -1,4 +1,5 @@
 var express = require('express');
+var http = require('http');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -9,6 +10,7 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+var server = new http.Server(app);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -42,5 +44,11 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+// server startup
+const port = process.env.PORT || 3000;
+server.listen(port, function() {
+	console.log("started http server on " + port);
+}) 
 
 module.exports = app;
