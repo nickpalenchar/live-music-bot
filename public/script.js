@@ -1,12 +1,6 @@
-console.log("hello");
-
 var socket = io();
 
-$(function () {
-  console.log("adding event");
-  $('#test').click(function(){
-    console.log("sending");
-    socket.emit('test');
-  });
-
+$("input").click(function (e) {
+  var clickedId = e.target.id
+    socket.emit('sendNote', clickedId);
 });
