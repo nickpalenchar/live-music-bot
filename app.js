@@ -22,7 +22,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/public', express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(req, res){
   console.log("sending file");
@@ -49,9 +49,9 @@ app.use(function(err, req, res, next) {
 });
 
 // server startup
-const port = process.env.PORT || 3000;
-server.listen(port, function() {
-	console.log("started http server on " + port);
-}) 
+// const port = process.env.PORT || 3000;
+// server.listen(port, function() {
+// 	console.log("started http server on " + port);
+// })
 
 module.exports = app;
